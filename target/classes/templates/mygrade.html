@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>PCM Marksheet</title>
+	<style>
+	#example1 {
+     border: 8px solid black;
+     
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 15px;}
+	#example2{
+     border: 1px solid black;
+    
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 15px;}
+	#example3 {
+     
+     
+     background-size: cover;
+     background-repeat: no-repeat;
+     font-family: Astigmatic;
+
+     padding: 15px;}
+     
+	table {
+	  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	  border-collapse: collapse;  
+	  width: 100%;
+
+	}
+ 
+	td, th {
+	  border: 1px solid #dddddd;
+	  text-align: left;
+	  padding: 8px;
+	}
+ 
+	
+	tr:nth-child(even) {
+	  background-color: #005B9A;
+	}
+	  tr:nth-child(odd) {
+	  background-color: #0191C8;
+	}
+	marquee{
+      font-size: 15px;
+      font-weight: 800;
+      color: #FF0000;
+      font-family:Advent Pro ;
+      background-color: #D9B48FFF
+      }
+	</style>
+</head>
+<body>
+	<div id="example3">
+	<h1 align= "center"><p style = "font-family: Lucida Console "> AIM INSTITUTE OF TECHNOLOGY</p></h1>
+    <div id="example1">
+	<marquee>Announcement:College will resume from 20th July 2020</marquee><br>
+	
+	<header><h1 align="center">PCM MARKSHEET</h1></header>
+	<h2>STUDENT DETAILS:</h2>
+	<p>
+		<b>NAME:TANISH PARMAR</b><br>
+		<b>ROLL.NO:729</b><br>
+		<b>CLASS:FE-IT B</b><br>
+		<b>ACADEMIC YEAR:2019-2020</b><br>
+		</p>
+	<br>
+
+	
+	<table border=" 2" width = "50" cellpadding= "15" cellspacing="1">
+    <h2>MARKS:</h2>
+	<tr align="center">
+		
+		<th><b>Physics</b></th>
+		<th><b>Chemistry</b></th>
+		<th><b>Maths</b></th>
+		<th><b>Total</b></th>
+		<th><b>Grade</b></th>
+	</tr>
+	
+
+	<tr align="center">
+		<td th:text="${grade.Phy}"></td>
+		<td th:text="${grade.Chem}"></td>
+		<td th:text="${grade.Maths}"></td>
+		<td th:text="${grade.Total}"></td>
+		<td th:text="${grade.Grd}"></td>
+		
+		
+	</tr>
+</table>
+
+</body>
+</html>
